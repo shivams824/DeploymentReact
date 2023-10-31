@@ -194,7 +194,7 @@ const Home: React.FC<{ role: string }> = () => {
               updateSave={reloadTable}
               // userId={userId}
             />
-            <a href="ok">
+            <a href="http://www.google.com">
               <img src={search} alt="" className="search-icon" />
             </a>
             <input
