@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b8fcdc18.css",
+    "main.js": "/static/js/main.9c7f11e0.js",
+    "static/media/waterpump.png": "/static/media/waterpump.fb0f8b1364f8fec1d37b.png",
+    "static/media/logodesign.png": "/static/media/logodesign.b0a6612d0fe082e38bbb.png",
+    "static/media/navlogo.jpg": "/static/media/navlogo.b9c7a74a633fb5b5919e.jpg",
+    "index.html": "/index.html",
+    "main.b8fcdc18.css.map": "/static/css/main.b8fcdc18.css.map",
+    "main.9c7f11e0.js.map": "/static/js/main.9c7f11e0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b8fcdc18.css",
+    "static/js/main.9c7f11e0.js"
+  ]
+}
