@@ -14,7 +14,7 @@ import AssetDetail from './Components/AssetDetail/AssetDetail';
 function App() {
   return (
     <div className='App'>
-      <BrowserRouter basename="/">
+      <BrowserRouter>
       <Routes>
       <Route path="/" element={<LoginPage />} />
         <Route path="/Home" element={<Home role="role" />} />
