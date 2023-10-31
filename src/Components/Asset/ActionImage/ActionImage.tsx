@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import tridot from "../../assets/tridot.png";
-import Dropdown from 'react-bootstrap/Dropdown';
 import "./ActionImage.css";
 
 const ActionImage: React.FC = () => {

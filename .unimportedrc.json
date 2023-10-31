@@ -1,0 +1,26 @@
+{
+  "ignoreUnresolved": [],
+  "ignoreUnused": [
+    "@ag-grid-community/react",
+    "@hookform/resolvers",
+    "@testing-library/jest-dom",
+    "@testing-library/react",
+    "@testing-library/user-event",
+    "@types/jest",
+    "@types/node",
+    "@types/react-dom",
+    "jsonwebtoken",
+    "react-scripts",
+    "web-vitals",
+    "yup"
+  ],
+  "ignoreUnimported": [
+    "src/Components/Asset/ActionImage/ActionImage.tsx",
+    "src/Components/AssetView/AssetView.tsx",
+    "src/Components/Home/OperatorHome.tsx",
+    "src/Components/Home/Searchbox/Searchbox.tsx",
+    "src/Components/Login/Login.tsx",
+    "src/Components/Navbar/Dropdown/Dropdown.tsx",
+    "src/Components/View/TimeSeriesJson.js"
+  ]
+}

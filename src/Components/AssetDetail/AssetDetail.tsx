@@ -1,12 +1,11 @@
 import React from "react";
 import Plot from "react-plotly.js";
-import { useParams } from "react-router-dom";
 import waterpump from "../../assets/waterpump.png";
 import { Navbar } from "react-bootstrap";
 import Dashboard from "../Dashboard/Dashboard";
 
 const AssetDetail: React.FC = () => {
-  const { type } = useParams<{ type: string }>();
+  // const { type } = useParams<{ type: string }>();
 
   // Fetch additional details for the selected asset based on the 'type' parameter
   // You can use Axios or any other method to fetch the data

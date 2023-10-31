@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, createContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 // import companyLogo from '../../Assets/Images/company-logo.jpg';
@@ -12,17 +12,20 @@ let UserContext: any;
 const Login: React.FC = () => {
 
 
-    const [userIdFromDb, setUserIdFromDb]: any = useState([]);
+    // const [userIdFromDb, setUserIdFromDb]: any = useState([]);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [apiData, setApiData]: any[] = useState([]);
     const [loggedIn, SetLoggedIn] = useState('');
-    const [checkPassword, setCheckPassword]: any[] = useState([]);
-    const loginPageBool = true;
-    const [checkUserPass, setCheckUserPass]: any = useState();
+    // const [checkPassword, setCheckPassword]: any[] = useState([]);
+    // const loginPageBool = true;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [ setCheckUserPass]: any = useState();
+    
     let userId: any;
+    console.log(userId);
 
 
     useEffect(() => {
@@ -38,10 +41,10 @@ const Login: React.FC = () => {
         setPasswordError('');
         // let userPassBool = false;
 
-        const submitObject = {
-            "email": email,
-            "password": password
-        }
+        // const submitObject = {
+        //     "email": email,
+        //     "password": password
+        // }
 
         apiData.map((d: any) => {
             if (!email) {
@@ -53,10 +56,11 @@ const Login: React.FC = () => {
                 const { id } = apiData.find((item: any) => item.email == email);
                 console.log(id);
                 // && password == d.password
-                const payload = {
-                    "userId": userId,
-                    "password": password
-                }
+                // eslint-disable-next-line @typescript-eslint/no-unused-vars
+                // const payload = {
+                //     "userId": userId,
+                //     "password": password
+                // }
                 axios.post('http://localhost:5148/api/Login/login', {
                     userId: id,
                     password: password

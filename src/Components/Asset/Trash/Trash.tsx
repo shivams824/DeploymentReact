@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+
 import axios from "axios";
 import trash from "../../../assets/trash.png";
 import "./Trash.css";
-import { update } from "plotly.js";
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
 
 interface TrashProps {
   data: any[]; 
@@ -13,7 +11,6 @@ interface TrashProps {
 
 
 const Trash: React.FC<TrashProps> = (props: any) => {
-  const [isDeleting, setIsDeleting] = useState(false);
 
   const deleteVal = () => {
     const itemId = props.data.id;
@@ -25,6 +22,7 @@ const Trash: React.FC<TrashProps> = (props: any) => {
       .then((response) => {
         console.log("Item deleted successfully");
         alert("Error deleting the asset");
+        console.log(response);
         // reloadTable();
       })
       .catch((error) => {

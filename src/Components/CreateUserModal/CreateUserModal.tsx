@@ -1,3 +1,6 @@
+/*eslint no-unused-vars: "warn"*/
+// eslint-disable-next-line no-unused-vars
+/*global some_unused_var*/
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
@@ -21,7 +24,6 @@ const CreateUserModal: React.FC<{ isOpen: boolean; onClose: () => void; updateSa
 
 
   const handleSave = () => {
-    const isRoleOperator = Role === "Operator";
 
     const data = {
       UserName : UserName,

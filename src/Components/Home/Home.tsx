@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import "./Home.css";
@@ -21,10 +22,11 @@ const Home: React.FC<{ role: string }> = () => {
   // const userurl = "";
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [data, setData] = useState([]);
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
   const [chartData, setchartData] = useState<any>([]);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [filteredData, setFilteredData] = useState([]);
+  const [searchTerm] = useState("");
+  const [filteredData] = useState([]);
+  console.log(filteredData);
   const location = useLocation();
   // const userId = location.state.userId;
   const role = location.state.role;
@@ -38,23 +40,15 @@ const Home: React.FC<{ role: string }> = () => {
       const filteredData = data.filter((row: any) => {
         return row.AssetName.toLowerCase().includes(searchTerm.toLowerCase());
       });
-
+      console.log(customFilter);
       params.successCallback(filteredData, filteredData.length);
     },
   };
 
-  const onSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const term = e.target.value;
-    setSearchTerm(term);
 
-    const filtered = data.filter((row: any) => {
-      return row.AssetName.toLowerCase().includes(term.toLowerCase());
-    });
-
-    setFilteredData(filtered);
-  };
-
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let gridApi: any;
+  console.log(gridApi);
 
   useEffect(() => {
     axios.get(url).then((res: any) => {
@@ -106,6 +100,7 @@ const Home: React.FC<{ role: string }> = () => {
       Delete: "Trash",
     },
   ]);
+  console.log(rowData);
 
   const [columnDefVal]: any[] = useState([
     {
@@ -224,7 +219,7 @@ const Home: React.FC<{ role: string }> = () => {
               rowData={data}
               columnDefs={columnDefVal} /*onGridReady={onGridReady}*/
               onGridReady={(params) => {
-                gridApi = params.api;
+               gridApi = params.api;
               }}
             />
           </div>

@@ -26,7 +26,7 @@ const ProfileManagement: React.FC = () => {
   }, []);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modaldata, modalsetData] = useState([]);
+  // const [modaldata, modalsetData] = useState([]);
 
   const columnDefs: any = [
     { headerName: "Name", field: "userName", flex: 1 },

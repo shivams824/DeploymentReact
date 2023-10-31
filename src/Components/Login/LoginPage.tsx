@@ -18,8 +18,8 @@ const LoginPage: React.FC = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>();
-  const [role, setRole] = useState("");
-  const [userId, setUserId] = useState("");
+  // const [role, setRole] = useState("");
+  // const [userId, setUserId] = useState("");
   const [formErrors, setFormErrors] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
@@ -36,10 +36,10 @@ const LoginPage: React.FC = () => {
       const user: any = jwt(token);
       const userId = user.nameid;
       const role = user.role;
-      let props = {
-        role: role,
-        userId: userId,
-      };
+      // let props = {
+      //   role: role,
+      //   userId: userId,
+      // };
       console.log("Login successful");
       console.log(data);
       navigate("/Home", { state: { role, userId } });

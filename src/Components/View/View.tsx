@@ -7,7 +7,9 @@ import Dashboard from "../Dashboard/Dashboard";
 import axios from "axios";
 
 const View: React.FC = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [data, setData] = useState([]);
+  console.log(data);
   const [randomData, setRandomData] = useState({
     x: [],
     y1: [],

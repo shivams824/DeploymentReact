@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Dropdown, Image } from "react-bootstrap";
 import usericon from "../../assets/usericon.png";
-import logouticon from "../../assets/logout.png";
 import navlogo from "../../assets/navlogo.jpg";
 import logoutimg from "../../assets/logout.png";
 import manage from "../../assets/manage.png";
@@ -10,7 +9,7 @@ import "./Navbar.css";
 
 const Navbar: React.FC<{ role: string }> = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const [isLogout, setLogout] = useState(false);
+  // const [isLogout, setLogout] = useState(false);
   const navigate = useNavigate();
 
   const toggleDropdown = () => {
