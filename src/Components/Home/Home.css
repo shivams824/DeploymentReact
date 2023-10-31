@@ -1,0 +1,149 @@
+.Homepage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.table-container {
+  padding-top: 53px;
+  padding-left: 252px;
+}
+
+.header {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.create-button {
+  float: right;
+  border-radius: 4px;
+  height: 32px;
+  background-color: #0869ff;
+  border: 1px solid cadetblue;
+  display: flex;
+  align-items: center;
+  color: white;
+  width: 60px;
+  cursor: pointer;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.create-button:hover {
+  background-color: #086bffb1;
+  outline: auto;
+}
+
+.asset {
+  height: 45px;
+  font-weight: bolder;
+  font-size: 1.7rem;
+  margin-right: 8px;
+  padding-left: 15px;
+  margin-top: 11px;
+}
+
+.header {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.searchbox {
+  float: right;
+  background-color: #f3f6fd;
+  border: 1px solid #f3f6fd;
+  color: #1f1c2e;
+  font-size: small;
+  line-height: 24px;
+  border-radius: 4px;
+  padding: 0px 10px 0px 15px;
+  margin-left: 15px;
+  margin-right: 8px;
+  height: 32px;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  width: 100%;
+  max-width: 260px;
+  transition: 0.2s;
+}
+
+.search-icon {
+  float: right;
+  height: 22px;
+  align-items: center;
+  margin-top: 5px;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.heading {
+  font-weight: bold;
+}
+
+.contain {
+  display: flex;
+  margin-bottom: 5px;
+} 
+
+.ag-theme-alpine .ag-header-cell-label {
+  foreground-color: var(--ag-background-color);
+}
+
+.ag-theme-alpine {
+  --ag-background-color: #6a5b5b;
+}
+
+.ag-theme-mycustomtheme {
+  --ag-grid-size: 8px;
+  --ag-border-color: #086bffb1;
+  
+}
+
+.upper-home
+{
+  display: flex;
+  justify-content: center;
+  height: 295px !important;
+  box-shadow: 0 0 20px rgba(0.25, 0.5, 0, 0.15);
+}

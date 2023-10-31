@@ -1,0 +1,63 @@
+import React, { useState } from 'react';
+
+const SearchBar: React.FC = () => {
+  const [searchInput, setSearchInput] = useState('');
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchInput(event.target.value);
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Search"
+        value={searchInput}
+        onChange={handleChange}
+      />
+      {/* Add your search results component here */}
+    </div>
+  );
+};
+
+export default SearchBar;
+
+
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+const MyComponent = () => {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('/api/myEndpoint');
+        setData(response.data);
+      } catch (error) {
+        setError(error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      {data ? (
+        <ul>
+          {data.map((item) => (
+            <li key={item.id}>{item.name}</li>
+          ))}
+        </ul>
+      ) : (
+        <p>Loading data...</p>
+      )}
+      {error && <p>Error: {error}</p>}
+    </div>
+  );
+};
+
+export default MyComponent;

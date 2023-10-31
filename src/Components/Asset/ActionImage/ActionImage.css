@@ -1,0 +1,20 @@
+.tridot-img
+{
+    height: 20px;
+    width: 20px;
+    padding-left: 20px;
+}
+
+.tridot-img {
+    cursor: pointer;
+  }
+  
+  .dropdown-container {
+    position: relative; /* Ensure relative positioning */
+  }
+  
+  .dropdown-menu {
+    position: absolute; /* Position the dropdown absolutely */
+    right: 0; /* Adjust this value to control the right-side spacing */
+    z-index: 1000; /* Ensure the dropdown is above other content */
+  }

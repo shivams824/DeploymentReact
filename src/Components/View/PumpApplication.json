@@ -1,0 +1,25 @@
+{
+  "assets": [
+    {
+      "name": "Asset 1",
+      "type": "pump",
+      "imageSrc": "pump.png",
+      "xData": [1, 10, 3],
+      "yData": [75, 60, 88]
+    },
+    {
+      "name": "Asset 2",
+      "type": "valve",
+      "imageSrc": "valve.png",
+      "xData": [1, 2, 3],
+      "yData": [92, 63, 51]
+    },
+    {
+      "name": "Asset 3",
+      "type": "motor",
+      "imageSrc": "motor.png",
+      "xData": [2, 4, 6],
+      "yData": [57, 78, 65]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "assets": [
+    {
+      "name": "Asset 1",
+      "type": "pump",
+      "imageSrc": "pump-image-src",
+      "xData": [1, 10, 3],
+      "yData": [1, 6, 3],
+      "description": "This is a pump asset."
+    },
+    {
+      "name": "Asset 2",
+      "type": "camera",
+      "imageSrc": "camera-image-src",
+      "xData": [2, 5, 3],
+      "yData": [3, 8, 2],
+      "description": "This is a camera asset."
+    },
+    {
+      "name": "Asset 3",
+      "type": "wheel",
+      "imageSrc": "wheel-image-src",
+      "xData": [3, 6, 9],
+      "yData": [2, 5, 8],
+      "description": "This is a wheel asset."
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #8ecae6;
+  } 
+ 
+.login-box {
+    display: flex;   
+    padding-top: 50px;
+    max-width: 700px;
+    max-height: 700px;
+    width: 50%;
+    height: 400px;
+    margin: 100px auto;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 40px rgba(0,0,0,0.16);
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+.Login
+{
+    color: #023047;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 0;
+
+    margin-bottom: 25px;
+    width: fit-content;
+}
+
+.label
+{
+    /* display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 33px; */
+    align-self: start;
+    font-size: 16.5px;
+    padding-bottom: 0.5rem;
+    /* color: rgba(187,187,187,0.9); */
+    color: #a8a8a8;
+  
+}
+
+.login-button
+{
+    border-radius: 7%;
+    width: 100px;
+    height: 40px;
+    margin-top: 7px;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 700;
+    background: rgb(34,193,195);
+    /* background: linear-gradient(90deg, rgba(34,193,195,1) 0%,     rgba(253,187,45,1) 100%); */
+    border: 0px;
+    cursor: pointer;
+    transition: opacity 0.25s ease-out;
+}
+
+.login-button:hover{
+    background: rgb(34,193,195);
+    opacity: 0.8;
+}
+
+.checkbox
+{
+    font-family: 'Josefin Sans', sans-serif;
+    
+    font-size: 0.9rem;
+  
+    line-height: 1.1;
+    padding-bottom: 10px;
+    
+}
+
+.textbox
+{
+    width: 110%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 25px;
+}
+
+.textbox:placeholder-shown
+{
+    color: #ccc;
+}
+
+.login-container {
+    padding-left: 90px;
+}
+
+.remember
+{
+    font-size: 16.5px;
+    color: #a8a8a8;
+}
+
+.mainlogo
+{
+    padding-top: 55px;
+    height: 200px;
+    /* width: 250px; */
+    padding-left: 90px;
+}
+
+.error{
+    margin: 0;
+    color: red;
+    padding-left: 10px;
+}

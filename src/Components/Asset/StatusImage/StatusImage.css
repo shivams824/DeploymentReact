@@ -1,0 +1,15 @@
+.active{
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    padding-left: 14px;
+}
+
+
+.inactive{
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    padding-left: 14px;
+    align-items: center;
+}

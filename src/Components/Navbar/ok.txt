@@ -1,0 +1,328 @@
+{/* <div className="dropdown show">
+<button className="btn dropdown-toggle" style={{border: "transparent"}}
+        id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+    <img className='profileImage' src={profileIcon} alt='Profile'/>
+</button>
+
+<div className="dropdown-menu">                
+    <li><a className="dropdown-item" href="/myProfile">My Profile</a></li>
+    <li><a className="dropdown-item" href="/myDashboard">My Dashboard </a></li>
+    <li><hr class="dropdown-divider"/></li>
+    <li><a className="dropdown-item" href="/signOut">Signout</a></li>
+</div>
+</div> */}
+
+
+
+
+
+
+
+import React, { useState, useEffect } from 'react';
+
+const CameraStatus = () => {
+  const [cameraData, setCameraData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('your-backend-api-url');
+        const data = await response.json();
+        setCameraData(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const countStatus = (status) => {
+    return cameraData.reduce((count, camera) => {
+      if (camera.status === status) {
+        return count + 1;
+      }
+      return count;
+    }, 0);
+  };
+
+  return (
+    <div>
+      <h2>Camera Status</h2>
+      <p>Active Cameras: {countStatus('active')}</p>
+      <p>Inactive Cameras: {countStatus('inactive')}</p>
+    </div>
+  );
+};
+
+export default CameraStatus;
+
+
+
+
+import React, { useState } from 'react';
+import './App.css';
+
+interface DropdownProps {
+ show: boolean;
+ onClick: () => void;
+}
+
+const Dropdown: React.FC<DropdownProps> = ({ show, onClick, children }) => {
+ if (!show) {
+ return null;
+ }
+
+ return (
+ <div className="dropdown" onClick={onClick}>
+ {children}
+ </div>
+ );
+};
+
+const App: React.FC = () => {
+ const [showDropdown, setShowDropdown] = useState(false);
+
+ const handleImageClick = () => {
+ setShowDropdown(!showDropdown);
+ };
+
+ return (
+ <div className="App">
+ <img
+ src="https://via.placeholder.com/150"
+ alt="placeholder"
+ onClick={handleImageClick}
+ />
+ <Dropdown show={showDropdown} onClick={handleImageClick}>
+ <div className="dropdown-item">Item 1</div>
+ <div className="dropdown-item">Item 2</div>
+ <div className="dropdown-item">Item 3</div>
+ </Dropdown>
+ </div>
+ );
+};
+
+export default App;
+
+
+
+
+
+// interface Props {
+//   title: string;
+//   content: string;
+// }
+
+const CreateModal: React.FC<Props> = ({ title, content }) => {
+  //   const [open, setOpen] = useState(false);
+  
+  //   const handleOpen = () => {
+  //     setOpen(true);
+  //   };
+  
+  //   const handleClose = () => {
+  //     setOpen(false);
+    // };
+  
+    return (
+      // <div>
+        {/* <Button variant="contained" color="primary" onClick={handleOpen}>
+          Open Modal
+        </Button>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-title"
+          aria-describedby="modal-description"
+        >
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "80%",
+              bgcolor: "background.paper",
+              boxShadow: 24,
+              p: 4,
+            }}
+          >
+            <h2 id="modal-title">{title}</h2>
+            <p id="modal-description">{content}</p>
+          </div>
+        </Modal>
+      </div> */}
+    );
+  };
+  
+  export default CreateModal;
+
+
+
+
+
+///////////////////////////////////////////////////////////////////
+LOGIN PAGE
+///////////////////////////////////////////////////////////////////
+import React, { useState } from "react";
+import axios from "axios";
+// import { Link } from 'react-router';
+import { useForm } from "react-hook-form";
+import mainlogo from '../../assets/logodesign.png';
+import './LoginPage.css';
+
+const LoginPage: React.FC = () => {
+  const [formValues, setFormValues] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+  const [fromErrors, setFormErrors] = useState();
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    fetch('/api/login',{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({formValues})
+    })
+    setFormErrors(validate(formValues));
+  };
+
+  const validate = (input: any) => {
+    const errors: any = [];
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    if (input.Username != null) {
+      errors.append("Usename should Be Empty");
+    } else if (input.email != null) {
+    }
+    return input;
+  };
+
+  const {
+    formState: { errors },
+  } = useForm();
+
+  return (
+    <form onSubmit={handleSubmit} className="login-page">
+      <div className="login-box">
+        <div className="login-container">
+          
+          <h1 className="Login">
+            <b>Login</b>
+          </h1>
+          <label className="label">Username</label>
+          <br />
+          <i className="../user"></i>
+          <input
+            name="username"
+            className="textbox"
+            type="text"
+            id="fname"
+            placeholder="Enter username"
+            value={formValues.username}
+            onChange={handleChange}
+          />
+          <br />
+
+          <label className="label">Password</label>
+          <br />
+          <i className="../gmail_icon"></i>
+          <input
+            name="password"
+            className="textbox"
+            type="password"
+            id="password"
+            placeholder="Enter password"
+            value={formValues.password}
+            onChange={handleChange}
+          />
+          <br />
+
+          <div>
+            <input type="checkbox" />
+            <label className="remember">Remember me</label>
+          </div>
+          <div>
+            <button type="submit" className="login-button">
+              Login
+            </button>
+          </div>
+        </div>
+      <div><img src={mainlogo} alt="" className="mainlogo" /></div>
+      </div>
+    </form>
+  );
+};
+
+export default LoginPage;
+
+
+
+/////////////////////////////
+//table made
+// eslint-disable-next-line no-lone-blocks
+{
+  /* <table className="table">
+  <thead className="header">
+    <tr>
+      <th>Sr Id</th>
+      <th>Asset Name</th>
+      <th>Status</th>
+      <th>Description</th>
+      <th>View</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Pump</td>
+      <td>Active</td>
+      <td>
+        Longer text as sample table data for example to show fixed
+        layout
+      </td>
+      <td>View</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Pump</td>
+      <td>Active</td>
+      <td>
+        Longer text as sample table data for example to show fixed
+        layout
+      </td>
+      <td>View</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Pump</td>
+      <td>Active</td>
+      <td>
+        Longer text as sample table data for example to show fixed
+        layout
+      </td>
+      <td>View</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Pump</td>
+      <td>Active</td>
+      <td>
+        Longer text as sample table data for example to show fixed
+        layout
+      </td>
+      <td>View</td>
+    </tr>
+  </tbody>
+</table> */
+}
+///////////////////////////////////////

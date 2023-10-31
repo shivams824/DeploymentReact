@@ -1,0 +1,95 @@
+.view-page {
+  display: flex;
+}
+
+.view {
+  padding-left: 252px;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+  overflow: hidden; /* Prevent scrolling in the .view section */
+  margin-top: 53px; /* Move content below the navbar */
+}
+
+.upper {
+  display: flex;
+  height: 450px;
+  box-shadow: 0 0 20px rgba(0.25, 0.5, 0, 0.15);
+  margin-bottom: 0; /* Remove margin to minimize space */
+}
+
+.lower {
+  /* height: 43vh; */
+  display: flex;
+}
+
+.graph {
+  height: 700px;
+}
+
+.asset-image-div {
+  width: 100%;
+  max-width: 325px;
+  height: 200px;
+  border-collapse: collapse;
+  padding-left: 2px;
+  padding-top: 1px;
+  box-shadow: 0 0 20px rgba(0.25, 0.5, 0, 0.15);
+}
+
+.asset-description {
+  width: 100%;
+  background-color: #6ad2f2;
+  /* border-collapse: collapse; */
+  /* padding-left: 2px; */
+  padding: 5px;
+  font-size: 0.7em;
+  font-family: sans-serif;
+  background-color: #EEEEEE;
+  box-sizing: border-box;
+}
+
+.asset-image {
+  height: 100%;
+  width: auto;
+  display: block;
+  max-width: 100%;
+}
+
+.des{
+  /* background-color: #6ad2f2; */
+  /* height: 22px; */
+  margin: 0;
+  /* float: left; */
+  width: 100%;
+  text-align: left;
+}
+
+.deso{
+  width: 100%;
+ background-color: #EEEEEE;
+ padding: 5px;
+ /* margin: 5px; */
+ margin-top: 20px;
+  display: block;
+  /* padding: 20px; */
+  color: black;
+  font-size: 14px;
+  text-align: left;
+  margin: 5px;
+  margin-block-start: unset;
+  /* overflow: hidden; */
+}
+/* .deso p{margin-top: 20px;} */
+.asse{
+  display: block;
+  width: 100%;
+  background-color: #6ad2f2;
+  /* width: 400px; */
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 100;
+  /* float: left; */
+  /* padding-left: 10px; */
+}

@@ -1,0 +1,38 @@
+.manage-table {
+  padding-left: 252px;
+  /* margin-top: 53px; */
+}
+
+.asset-profile {
+  padding-left: 262px !important;
+  margin-top: 55px !important;
+  height: 45px;
+  font-weight: bolder;
+  font-size: 1.7rem;
+  margin-right: 8px;
+  padding-left: 15px;
+  margin-top: 11px;
+
+  /* padding-left: 10px; */
+}
+
+.create-button-profile {
+  float: right;
+  border-radius: 4px;
+  height: 32px;
+  background-color: #0869ff;
+  border: 1px solid cadetblue;
+  display: flex;
+  align-items: center;
+  color: white;
+  width: 60px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.create-button-profile:hover {
+  background-color: #086bffb1;
+  outline: auto;
+}
+
+
