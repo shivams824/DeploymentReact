@@ -100,7 +100,7 @@ const Home: React.FC<{ role: string }> = () => {
       Delete: "Trash",
     },
   ]);
-  console.log(rowData);
+  console.log(rowData); 
 
   const [columnDefVal]: any[] = useState([
     {
@@ -194,7 +194,7 @@ const Home: React.FC<{ role: string }> = () => {
               updateSave={reloadTable}
               // userId={userId}
             />
-            <a>
+            <a href="ok">
               <img src={search} alt="" className="search-icon" />
             </a>
             <input
