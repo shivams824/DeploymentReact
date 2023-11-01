@@ -14,10 +14,10 @@ import AssetDetail from './Components/AssetDetail/AssetDetail';
 function App() {
   return (
     <div className='App'>
-      <BrowserRouter basename="DeploymentReact">
+      <BrowserRouter basename="/DeploymentReact">
       <Routes>
       <Route path="/" element={<LoginPage />} />
-        <Route path="/Home" element={<Home role="role" />} />
+        <Route path="/DeploymentReact" element={<Home role="role" />} />
         <Route path="view" element={<View />} />
         <Route path="/asset/:type" Component={AssetDetail} />
           <Route path="/manage-profile" element={<ProfileManagement />} />
