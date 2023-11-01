@@ -12,7 +12,6 @@ import AssetDetail from "./Components/AssetDetail/AssetDetail";
 const App = () => {
   return (
     <div className="App">
-      <BrowserRouter>
         <Routes>
           <Route path="/" element={<LoginPage />} />
           <Route path="/Home" element={<Home role="role" />} />
@@ -20,7 +19,6 @@ const App = () => {
           <Route path="/asset/:type" Component={AssetDetail} />
           <Route path="/manage-profile" element={<ProfileManagement />} />
         </Routes>
-      </BrowserRouter>
     </div>
   );
 };
