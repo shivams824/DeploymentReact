@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "homepage": "https://shivams824.github.io/DeploymentReact",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@ag-grid-community/core": "^30.2.0",
     "@ag-grid-community/react": "^30.2.0",
