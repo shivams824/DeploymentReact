@@ -14,7 +14,7 @@ import AssetDetail from './Components/AssetDetail/AssetDetail';
 function App() {
   return (
     <div className='App'>
-      <BrowserRouter basename="https://shivams824.github.io/DeploymentReact/">
+      <BrowserRouter basename="DeploymentReact">
       <Routes>
       <Route path="/" element={<LoginPage />} />
         <Route path="/Home" element={<Home role="role" />} />
