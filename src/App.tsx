@@ -16,8 +16,8 @@ function App() {
     <div className='App'>
       <BrowserRouter basename="/DeploymentReact">
       <Routes>
-      <Route path="/DeploymentReact" element={<LoginPage />} />
-        <Route path="/DeploymentReact/Home" element={<Home role="role" />} />
+      <Route path="/" element={<LoginPage />} />
+        <Route path="/Home" element={<Home role="role" />} />
         <Route path="view" element={<View />} />
         <Route path="/asset/:type" Component={AssetDetail} />
           <Route path="/manage-profile" element={<ProfileManagement />} />
