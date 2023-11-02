@@ -3,7 +3,7 @@ import { Dropdown, Image } from "react-bootstrap";
 import usericon from "../../assets/usericon.png";
 import navlogo from "../../assets/navlogo.jpg";
 import logoutimg from "../../assets/logout.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./UserNavbar.css";
 
 const UserNavbar: React.FC = () => {
@@ -26,9 +26,9 @@ const UserNavbar: React.FC = () => {
     <div>
       <nav className="navbar">
         <div className="nav-container">
-          <a href="/Home">
-            <img src={navlogo} alt="" className="navlogo" />
-          </a>
+        <Link to="/Home">
+        <img src={navlogo} alt="" className="navlogo" />
+      </Link>
         </div>
         <div>
           <Dropdown

@@ -1,5 +1,6 @@
 import React from "react";
 import "./DashBoard.css";
+import { Link } from "react-router-dom";
 
 const Dashboard: React.FC = () => {
   return (
@@ -7,23 +8,23 @@ const Dashboard: React.FC = () => {
       <div className="dashboard">
         <ul className="sidebar-list">
           <li className="list-item">
-            <a href="/Home" className="link">
+            <Link to="/Home" className="link">
               <span>Home</span>
-            </a>
+            </Link>
           </li>
           <li className="list-item-disabled">
             {/* <a href="/Products" className="link"> */}
-              <span>Products</span>
+            <span>Products</span>
             {/* </a> */}
           </li>
           <li className="list-item-disabled">
             {/* <a href="/Stats" className="link"> */}
-              <span>Statistics</span>
+            <span>Statistics</span>
             {/* </a> */}
           </li>
           <li className="list-item-disabled">
             {/* <a href="/Asset" className="link"> */}
-              <span>Asset</span>
+            <span>Asset</span>
             {/* </a> */}
           </li>
         </ul>
