@@ -13,9 +13,9 @@ const App = () => {
   return (
     <div className="App">
         <Routes>
-          <Route path="/" element={<LoginPage />} />
+          {/* <Route path="/" element={<LoginPage />} /> */}
           {/* <Route path="/DeploymentReact/Home" element={<Home />} /> */}
-          <Route path="/view" element={<View />} />
+          <Route path="/" element={<View />} />
           <Route path="/asset/:type" Component={AssetDetail} />
           <Route path="/manage-profile" element={<ProfileManagement />} />
         </Routes>
