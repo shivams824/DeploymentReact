@@ -14,7 +14,7 @@ const App = () => {
     <div className="App">
         <Routes>
           <Route path="/" element={<LoginPage />} />
-          <Route path="/Home" element={<Home role="role" />} />
+          <Route path="/" element={<Home role="role" />} />
           <Route path="view" element={<View />} />
           <Route path="/asset/:type" Component={AssetDetail} />
           <Route path="/manage-profile" element={<ProfileManagement />} />
