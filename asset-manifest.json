@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/DeploymentReact/static/css/main.1d3fa0e2.css",
-    "main.js": "/DeploymentReact/static/js/main.cc822052.js",
+    "main.css": "/DeploymentReact/static/css/main.8f9a497f.css",
+    "main.js": "/DeploymentReact/static/js/main.f807618a.js",
     "static/media/waterpump.png": "/DeploymentReact/static/media/waterpump.fb0f8b1364f8fec1d37b.png",
     "static/media/navlogo.jpg": "/DeploymentReact/static/media/navlogo.b9c7a74a633fb5b5919e.jpg",
     "index.html": "/DeploymentReact/index.html",
-    "main.1d3fa0e2.css.map": "/DeploymentReact/static/css/main.1d3fa0e2.css.map",
-    "main.cc822052.js.map": "/DeploymentReact/static/js/main.cc822052.js.map"
+    "main.8f9a497f.css.map": "/DeploymentReact/static/css/main.8f9a497f.css.map",
+    "main.f807618a.js.map": "/DeploymentReact/static/js/main.f807618a.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d3fa0e2.css",
-    "static/js/main.cc822052.js"
+    "static/css/main.8f9a497f.css",
+    "static/js/main.f807618a.js"
   ]
 }
