@@ -8,7 +8,7 @@ const Dashboard: React.FC = () => {
       <div className="dashboard">
         <ul className="sidebar-list">
           <li className="list-item">
-            <Link to="/Home" className="link">
+            <Link to="/home" className="link">
               <span>Home</span>
             </Link>
           </li>

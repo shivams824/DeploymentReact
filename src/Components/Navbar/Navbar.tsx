@@ -27,7 +27,7 @@ const Navbar: React.FC<{ role: string }> = () => {
     <div>
       <nav className="navbar">
         <div className="nav-container">
-          <Link to="/Home">
+          <Link to="/home">
             <img src={navlogo} alt="" className="navlogo" />
           </Link>
         </div>
