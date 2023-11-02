@@ -16,7 +16,7 @@ import Trash from "../Asset/Trash/Trash";
 import { useLocation } from "react-router-dom";
 import UserNavbar from "../UserNavbar/UserNavbar";
 
-const Home: React.FC<{ role: string }> = () => {
+const Home: React.FC<{  }> = () => {
   const url = "http://localhost:5104/api/AssetView";
   // const userId: any = props.userId;
   // const userurl = "";
