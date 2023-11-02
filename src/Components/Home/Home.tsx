@@ -13,10 +13,10 @@ import ViewImage from "../Asset/ViewImage/ViewImage";
 import CreateModal from "./CreateModal/CreateModal";
 import PieChart from "../PieChart/PieChart";
 import Trash from "../Asset/Trash/Trash";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import UserNavbar from "../UserNavbar/UserNavbar";
 
-const Home: React.FC<{  }> = () => {
+const Home: React.FC<{}> = () => {
   const url = "http://localhost:5104/api/AssetView";
   // const userId: any = props.userId;
   // const userurl = "";
@@ -45,7 +45,9 @@ const Home: React.FC<{  }> = () => {
     },
   };
 
+  const navigate = useNavigate();
 
+  
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let gridApi: any;
   console.log(gridApi);
@@ -58,7 +60,6 @@ const Home: React.FC<{  }> = () => {
       setchartData(assetData);
     });
   }, []);
-
 
   const reloadTable: any = () => {
     axios
@@ -100,7 +101,7 @@ const Home: React.FC<{  }> = () => {
       Delete: "Trash",
     },
   ]);
-  console.log(rowData); 
+  console.log(rowData);
 
   const [columnDefVal]: any[] = useState([
     {
@@ -174,58 +175,61 @@ const Home: React.FC<{  }> = () => {
   ]);
 
   // if (role === "Admin") {
-    return (
-      <div className="Homepage">
-        <div>
-          <Navbar  />
+  return (
+    <div className="Homepage">
+      <div>
+        <Navbar />
+      </div>
+      <div>
+        <Dashboard />
+      </div>
+      <div className="table-container">
+        <div className="upper-home">
+          <PieChart chartData={chartData} />
         </div>
-        <div>
-          <Dashboard />
-        </div>
-        <div className="table-container">
-          <div className="upper-home">
-            <PieChart chartData={chartData} />
-          </div>
-          <div className="asset">
-            Assets
-            <CreateModal
-              isOpen={isModalOpen}
-              onClose={() => setIsModalOpen(false)}
-              updateSave={reloadTable}
-              // userId={userId}
-            />
-            <a href="http://www.google.com">
-              <img src={search} alt="" className="search-icon" />
-            </a>
-            <input
-              type="text"
-              placeholder="Search ..."
-              className="searchbox"
-              // value={searchTerm}
-              // onChange={onSearch}
-            ></input>
-            <button
-              className="create-button"
-              onClick={() => setIsModalOpen(true)}
-            >
-              Create
-            </button>
-          </div>
-          <div
-            className="ag-theme-alpine, ag-theme-mycustomtheme"
-            style={{ height: 302, width: 1282 }}
+        <div className="asset">
+          Assets
+          <CreateModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            updateSave={reloadTable}
+            // userId={userId}
+          />
+          <a href="http://www.google.com">
+            <img src={search} alt="" className="search-icon" />
+          </a>
+          <input
+            type="text"
+            placeholder="Search ..."
+            className="searchbox"
+            // value={searchTerm}
+            // onChange={onSearch}
+          ></input>
+          <button
+            className="create-button"
+            onClick={() => setIsModalOpen(true)}
           >
-            <AgGridReact
-              rowData={data}
-              columnDefs={columnDefVal} /*onGridReady={onGridReady}*/
-              onGridReady={(params) => {
-               gridApi = params.api;
-              }}
-            />
-          </div>
+            Create
+          </button>
+          <button className="view-button" onClick={() =>  navigate('/View')}>
+            View
+          </button>
+        </div>
+        <div
+          className="ag-theme-alpine, ag-theme-mycustomtheme"
+          style={{ height: 302, width: 1282 }}
+        >
+          <AgGridReact
+            rowData={data}
+            columnDefs={columnDefVal} /*onGridReady={onGridReady}*/
+            onGridReady={(params) => {
+              gridApi = params.api;
+            }}
+          />
         </div>
       </div>
-    );
+    </div>
+  );
   // } else {
   //   return (
   //     <div className="Homepage">
