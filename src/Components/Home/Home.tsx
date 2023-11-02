@@ -173,7 +173,7 @@ const Home: React.FC<{  }> = () => {
     },
   ]);
 
-  if (role === "Admin") {
+  // if (role === "Admin") {
     return (
       <div className="Homepage">
         <div>
@@ -226,60 +226,60 @@ const Home: React.FC<{  }> = () => {
         </div>
       </div>
     );
-  } else {
-    return (
-      <div className="Homepage">
-        <div>
-          <UserNavbar />
-        </div>
-        <div>
-          <Dashboard />
-        </div>
-        <div className="table-container">
-          <div className="upper-home">
-            <PieChart chartData={chartData} />
-          </div>
-          <div className="asset">
-            Assets
-            <CreateModal
-              isOpen={isModalOpen}
-              onClose={() => setIsModalOpen(false)}
-              updateSave={reloadTable}
-              // userId={userId}
-            />
-            <a>
-              <img src={search} alt="" className="search-icon" />
-            </a>
-            <input
-              type="text"
-              placeholder="Search ..."
-              className="searchbox"
-              // value={searchTerm}
-              // onChange={onSearch}
-            ></input>
-            <button
-              className="create-button"
-              onClick={() => setIsModalOpen(true)}
-            >
-              Create
-            </button>
-          </div>
-          <div
-            className="ag-theme-alpine, ag-theme-mycustomtheme"
-            style={{ height: 302, width: 1282 }}
-          >
-            <AgGridReact
-              rowData={data}
-              columnDefs={columnDefVal} /*onGridReady={onGridReady}*/
-              onGridReady={(params) => {
-                gridApi = params.api;
-              }}
-            />
-          </div>
-        </div>
-      </div>
-    );
-  }
+  // } else {
+  //   return (
+  //     <div className="Homepage">
+  //       <div>
+  //         <UserNavbar />
+  //       </div>
+  //       <div>
+  //         <Dashboard />
+  //       </div>
+  //       <div className="table-container">
+  //         <div className="upper-home">
+  //           <PieChart chartData={chartData} />
+  //         </div>
+  //         <div className="asset">
+  //           Assets
+  //           <CreateModal
+  //             isOpen={isModalOpen}
+  //             onClose={() => setIsModalOpen(false)}
+  //             updateSave={reloadTable}
+  //             // userId={userId}
+  //           />
+  //           <a>
+  //             <img src={search} alt="" className="search-icon" />
+  //           </a>
+  //           <input
+  //             type="text"
+  //             placeholder="Search ..."
+  //             className="searchbox"
+  //             // value={searchTerm}
+  //             // onChange={onSearch}
+  //           ></input>
+  //           <button
+  //             className="create-button"
+  //             onClick={() => setIsModalOpen(true)}
+  //           >
+  //             Create
+  //           </button>
+  //         </div>
+  //         <div
+  //           className="ag-theme-alpine, ag-theme-mycustomtheme"
+  //           style={{ height: 302, width: 1282 }}
+  //         >
+  //           <AgGridReact
+  //             rowData={data}
+  //             columnDefs={columnDefVal} /*onGridReady={onGridReady}*/
+  //             onGridReady={(params) => {
+  //               gridApi = params.api;
+  //             }}
+  //           />
+  //         </div>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 };
 
 export default Home;
