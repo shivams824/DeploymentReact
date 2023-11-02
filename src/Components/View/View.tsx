@@ -38,7 +38,7 @@ const View: React.FC = () => {
   return (
     <div>
       <div>
-        <Navbar role="admin" />
+        <Navbar  />
       </div>
       <div>
         <Dashboard />

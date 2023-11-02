@@ -7,7 +7,7 @@ import manage from "../../assets/manage.png";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar: React.FC<{ role: string }> = () => {
+const Navbar: React.FC = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   // const [isLogout, setLogout] = useState(false);
   const navigate = useNavigate();

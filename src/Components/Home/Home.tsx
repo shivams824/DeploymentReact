@@ -29,10 +29,10 @@ const Home: React.FC<{  }> = () => {
   console.log(filteredData);
   const location = useLocation();
   // const userId = location.state.userId;
-  const role = location.state.role;
+  // const role = location.state.role;
   // const userId = props.userId;
   // console.log(userId, "userId")
-  console.log(role, "role");
+  // console.log(role, "role");
   // const { userid }: any = useParams();
   // const url2 = `http://localhost:5104/api/AssetView/${userid}/assets`;
   const customFilter = {
@@ -177,7 +177,7 @@ const Home: React.FC<{  }> = () => {
     return (
       <div className="Homepage">
         <div>
-          <Navbar role="admin" />
+          <Navbar  />
         </div>
         <div>
           <Dashboard />
